@@ -1,10 +1,10 @@
-24 / 24
-11 / 36
-30 / 58
-9 / 9
-28 / 28
-5 / 5
-15 / 15
-10 / 10
-4 / 4
+( 24 / 24 ) -> kidney
+( 11 / 36 ) -> liver
+( 30 / 58 ) -> cerebellum
+( 9 / 9 ) -> kidney
+( 28 / 28 ) -> colon
+( 5 / 5 ) -> liver
+( 15 / 15 ) -> endometrium
+( 10 / 10 ) -> liver
+( 4 / 4 ) -> cerebellum
 Mismatches: 28%

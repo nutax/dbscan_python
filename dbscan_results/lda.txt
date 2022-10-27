@@ -1,6 +1,6 @@
-39 / 88
-31 / 31
-38 / 38
-26 / 26
-6 / 6
+( 39 / 88 ) -> kidney
+( 31 / 31 ) -> hippocampus
+( 38 / 38 ) -> cerebellum
+( 26 / 26 ) -> liver
+( 6 / 6 ) -> placenta
 Mismatches: 26%
