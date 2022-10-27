@@ -9,7 +9,7 @@ files = [f'data/{x}' for x in os.listdir('data/')]
 for file in files:
     data = np.genfromtxt(file, delimiter=',')
     y, X = data[:, 0], data[:, 1:]
-    minNeigbors = X.shape[1]  # (Sander et al., 1998)
+    minNeigbors = 20
     nearest_neighbors = NearestNeighbors(n_neighbors=minNeigbors)
     # (Nadia Rahmah and Imas Sukaesih Sitanggang, 2016)
     neighbors = nearest_neighbors.fit(X)

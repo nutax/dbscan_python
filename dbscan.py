@@ -16,7 +16,7 @@ def dbscan_dfs(kdtree, X, eps, min_samples, curr, visited, labels, cluster):
     return
 
 
-def dbscan(X, eps=0.5, min_samples=5):
+def dbscan(X, eps, min_samples):
     rows = X.shape[0]
     visited = np.zeros(rows, dtype=np.bool)
     labels = np.zeros(rows)
