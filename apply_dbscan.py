@@ -20,7 +20,7 @@ for file, e, m in zip(files, eps, minPts):
     start = timer()
     clusters = dbscan(X, e, m)
     end = timer()
-    print(f'{(end - start)*1000} ms')
+    ms = (end - start)*1000
     cluster_y_fr = defaultdict(lambda: defaultdict(int))
     cluster_sum_fr = defaultdict(int)
     for cluster, label in zip(clusters, y):
@@ -37,4 +37,5 @@ for file, e, m in zip(files, eps, minPts):
         for cluster in cluster_sum_fr:
             out.write(
                 f'( {cluster_max_fr[cluster]} / {cluster_sum_fr[cluster]} ) -> {names[int(cluster_max_label[cluster])]}\n')
-        out.write(f'Mismatches: {round(100*errors/len(X))}%')
+        out.write(f'Mismatches: {round(100*errors/len(X))}%\n')
+        out.write(f'DBSCAN took {ms} ms')
