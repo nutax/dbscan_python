@@ -5,6 +5,8 @@ import os
 from sklearn.neighbors import NearestNeighbors
 from matplotlib import pyplot as plt
 from kneed import KneeLocator
+from timeit import default_timer as timer
+
 
 files = [f'data/{x}' for x in os.listdir('data/')]
 eps = [3, 125, 125]
@@ -15,7 +17,10 @@ names = ['cerebellum', 'colon', 'endometrium',
 for file, e, m in zip(files, eps, minPts):
     data = np.genfromtxt(file, delimiter=',')
     y, X = data[:, 0], data[:, 1:]
+    start = timer()
     clusters = dbscan(X, e, m)
+    end = timer()
+    print(f'{(end - start)*1000} ms')
     cluster_y_fr = defaultdict(lambda: defaultdict(int))
     cluster_sum_fr = defaultdict(int)
     for cluster, label in zip(clusters, y):
